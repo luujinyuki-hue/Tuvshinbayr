@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mogoi1 {
+        width: 200px;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 300px;
+       
+    }
+    #mogoi2 {
+        width: 200px;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 50px;
+       
+    }
+</style>
+<body style="margin: 0 auto"; onkeypress="myFunc(event)">
+    <div style="width: 50%; background-image: url(mod.png); background-repeat: no-repeat; background-size: contain; height: 1500px;">
+        <img id="mogoi1" src="mogoi1.png" />
+        <img id="mogoi2" src="mogoi2.png" />
+    </div>
+    <script>
+        let mogoi1 = document.getElementById("mogoi1");
+    let mogoi2 = document.getElementById("mogoi2");
+    let top1 = 0;
+    let top2 = 0;
+    function myFunc(event) {
+        if(event.key == "a"){
+            top1 += 50;
+            mogoi1.style.marginTop = top1 + "px";
+          } else if (event.key == "d"){
+            top2 += 50;
+            mogoi2.style.marginTop = top2 + "px";
+          }
+          if (top1 > 500) {
+            alert("2dvgeer mogoi hojloo");
+            mogoi1.style.marginTop = 0 + "px";
+            mogoi2.style.marginTop = 0 + "px";
+            top1 = 0;
+            top2 = 0;
+          } else if (top2 >  500) {
+            alert("1dugaar mogoi hojloo");
+            mogoi1.style.marginTop = 0 + "px"
+            mogoi2.style.marginTop = 0 + "px"
+            top1 = 0;
+            top2 = 0;
+          }
+        }
+    
+    </script>
+    
+</body>
+</html>
